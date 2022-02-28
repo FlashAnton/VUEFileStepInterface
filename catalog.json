@@ -1,0 +1,92 @@
+[
+    {
+      "id": 1,
+      "category": "masks",
+      "productname": "Mineral Mask",
+      "price": "3,5 $",
+      "sex": "Woman",
+      "description": {
+          "country": "France",
+          "effect": "Restore skin balance.",
+          "expirationdate": "None"
+      },
+      "phone": "8-800-200-40-05",
+      "website": "vichyconsult.ru",
+      "companyname": "Vichy"
+     },
+     {
+          "id": 2,
+          "category": "shampoo",
+          "productname": "Dercos Nutrients",
+          "price": "15 $",
+          "sex": "Woman",
+          "description": {
+              "country": "France",
+              "effect": "Shampoo for hair shine.",
+              "expirationdate": "1 years"
+          },
+          "phone": "8-800-200-40-05",
+          "website": "vichyconsult.ru",
+          "companyname": "Vichy"
+    },
+    {
+      "id": 3,
+      "category": "deodarant",
+      "productname": "Vichy Homme",
+      "price": "16 $",
+      "sex": "Man",
+      "description": {
+          "country": "France",
+          "effect": "Ball deodarant.",
+          "expirationdate": "None"
+      },
+      "phone": "8-800-200-40-05",
+      "website": "vichyconsult.ru",
+      "companyname": "Vichy"
+   },
+   {
+        "id": 4,
+        "category": "day care",
+        "productname": "Aqualia Thermal",
+        "price": "16,9 $",
+        "sex": "Woman",
+        "description": {
+            "country": "France",
+            "effect": "Cream restoring the mineral balance of the skin.",
+            "expirationdate": "None"
+        },
+        "phone": "8-800-200-40-05",
+        "website": "vichyconsult.ru",
+        "companyname": "Vichy"
+    },
+    {
+         "id": 5,
+         "category": "sunscreen",
+         "productname": "Capital ideal soleil",
+         "price": "25 $",
+         "sex": "Unisex",
+         "description": {
+             "country": "France",
+             "effect": "Resistan sunscreen.",
+             "expirationdate": "None"
+         },
+         "phone": "8-800-200-40-05",
+         "website": "vichyconsult.ru",
+         "companyname": "Vichy"
+   },
+   {
+        "id": 6,
+        "category": "nigth care",
+        "productname": "Idealia",
+        "price": "40 $",
+        "sex": "Woman",
+        "description": {
+            "country": "France",
+            "effect": "Night peeling.",
+            "expirationdate": "None"
+        },
+        "phone": "8-800-200-40-05",
+        "website": "vichyconsult.ru",
+        "companyname": "Vichy"
+  }
+]

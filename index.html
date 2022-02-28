@@ -1,0 +1,109 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Каталог</title>
+	</head>
+	<body>
+		<script src="Vue.js"></script>
+		<script src="comp_sf.js"></script>
+		<script src="comp_nf.js"></script>
+		<script src="comp_f.js"></script>
+		<script src="comp_l.js"></script>
+
+		<script type="text/x-template" id="selectfile">
+			<div id="myCatalog">
+				<input type="file" id="file">
+				<button @click="readFile($event)" @click="next">Далее</button>
+			</div>
+		</script>
+
+		<script type="text/x-template" id="noFormat">
+			<div id="myCatalog">
+				<b>Вывод без форматирования</b>
+				<br>
+				<li v-for="el in this.$root.fileData">{{ el }}</li>
+				<br>
+				<button @click="back">Назад</button>
+				<button @click="next">Далее</button>
+			</div>
+		</script>
+
+		<script type="text/x-template" id="Format">
+			<div id="myCatalog">
+				<b>Вывод с форматированием: </b>
+				<li v-for="el in this.$root.fileData">{{el.id}}. <b>Название товара:</b> <i>{{el.productname}}</i> <b>  Пол:</b> <i>{{el.sex}}</i>  <b>Описание:</b> <i>{{ el.description.effect}}</i> <b> Цена: </b> <i>{{el.price}}</i> </li>
+				<br>
+				<button @click="back">Назад</button>
+				<button @click="next">Далее</button>
+			</div>
+		</script>
+
+		<script type="text/x-template" id="Spisok">
+			<div id="myCatalog">
+				<b>Выберите элемент из списка</b>
+				<br>
+				<select v-model="selected">
+				   	<option v-for="el in this.$root.fileData" v-bind:value="el.description.effect"> {{el.productname}} </option>
+			   	</select>
+			    <span v-if="selected!==''"> <b>Описание:</b>   <i>{{selected}}</i> </span>
+			   	<br>
+				<button @click="back">Назад</button>
+			</div>
+		</script>
+
+		<div id="myCatalog">
+			<component v-bind:is="getPage"></component>
+		</div>
+
+		<script>
+		 	myVueCatalog = new Vue(
+			{
+				el: '#myCatalog',
+
+				data:
+				{
+					fileData: '',
+					pageN: 'fSelect'
+				},
+
+				computed:
+				{
+					getPage: function()
+					{
+						if (this.pageN == 'fSelect')
+						{
+							return 'selectf';
+						}
+						else
+						{
+							if (this.pageN == 'NForm')
+							{
+								return 'noform';
+							}
+							else
+							{
+								if (this.pageN == 'Form')
+								{
+									return 'format';
+								}
+								else
+								{
+									if (this.pageN == 'Spisok')
+									{
+										return 'nspis';
+									}
+								}
+							}
+						}
+					}
+				},
+
+				methods:
+				{
+
+				},
+			})
+		</script>
+
+	</body>
+</html>
